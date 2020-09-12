@@ -34,7 +34,7 @@ const Toast: React.FC<ToastProps> = ({ toast, style }) => {
   }, [removeToast, toast.id]);
   return (
     <Container
-      hasDescription={!!toast.description}
+      hasDescription={Number(!!toast.description)}
       type={toast.type}
       style={style}
     >

@@ -1,7 +1,8 @@
 {
   "env": {
     "browser": true,
-    "es6": true
+    "es6": true,
+    "jest": true
   },
   "extends": [
     "plugin:react/recommended",
@@ -35,6 +36,7 @@
     "camelcase": "off",
     "@typescript-eslint/no-unused-vars": "off",
     "unused-imports/no-unused-imports-ts": "error",
+    "import/no-duplicates": "off",
     "unused-imports/no-unused-vars-ts": [
       "warn",
       {

@@ -8,7 +8,11 @@ interface Props extends RouteProps {
   isPrivate?: boolean;
   component: React.ComponentType;
 }
-const Route: React.FC<Props> = ({ isPrivate = false, component: Component, ...props }) => {
+const Route: React.FC<Props> = ({
+  isPrivate = false,
+  component: Component,
+  ...props
+}) => {
   const { user } = useAuth();
 
   return (
@@ -21,13 +25,13 @@ const Route: React.FC<Props> = ({ isPrivate = false, component: Component, ...pr
             <Redirect
               to={{
                 pathname: isPrivate ? '/' : '/dashboard',
-                state: { from: location }
+                state: { from: location },
               }}
             />
-          )
+          );
       }}
     />
   );
-}
+};
 
 export default Route;
