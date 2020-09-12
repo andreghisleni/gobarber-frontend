@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { render, wait } from '@testing-library/react';
+import { render, wait, fireEvent } from '@testing-library/react';
 import Input from '../../components/Input/index';
 
 jest.mock('@unform/core', () => {
